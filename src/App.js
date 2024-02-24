@@ -12,6 +12,7 @@ import { InlineWidget } from "react-calendly";
 import { PopupWidget } from "react-calendly";
 import { PopupButton } from "react-calendly";
 import Footer from './components/Footer.js'
+import ScrollArrow from './components/ScrollArrow.js';
 
 
 
@@ -59,15 +60,13 @@ function App() {
     }
   };
   
-  
-
   return (
     <div className="App">
 
       <Header parallaxRef={ref} />    
 
       {/* <header className="App-header"> */}
-        <Parallax pages={1.5} ref={ref}>
+        <Parallax pages={2} ref={ref}>
 
           <ParallaxLayer 
           offset={0.2} 
@@ -85,8 +84,14 @@ function App() {
             {/* <img src={sampleimage} className="headshot"/> */}
           </div>
 
-          <ParallaxLayer offset={0.5} speed={0.8}>
+          <ParallaxLayer offset={0.4} speed={0.8}>
           <ChatBox onSendMessage={handleSendMessage} conversation={conversation} />
+          
+          <div className="arrow-container">
+            <ScrollArrow parallaxRef={ref} />
+          </div>
+
+          
           
           </ParallaxLayer>
 
@@ -94,7 +99,7 @@ function App() {
           </ParallaxLayer>
           
           
-          <ParallaxLayer offset={1} speed={0.5}>
+          <ParallaxLayer offset={1.75} speed={.8}>
           <div id="socials"></div>
             
             {/* <div className="Socials" ref={socialRef}> */}
@@ -102,8 +107,8 @@ function App() {
               <LinkedInLogo />
               <GitHubLogo />
               <Email />
-
             </div>
+            
             <div className="Socials">
               <PopupButton
                 className = "calendly"
@@ -115,14 +120,12 @@ function App() {
                 rootElement={document.getElementById("root")}
                 text="Calendly"
               />
-
             </div>
-
-
+           
             <Footer />
-          </ParallaxLayer>
+            </ParallaxLayer>
       
-
+            
         </Parallax>
       {/* </header> */}
 

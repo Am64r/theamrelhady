@@ -1,22 +1,23 @@
 import React, {useState} from 'react';
 import '../css/Header.css';
 
-const Header = ({  }) => {
+const Header = ({ parallaxRef  }) => {
     const [showEmail, setShowEmail] = useState(false);
-
-    const scrollToSocials = () => {
-        const socialsSection = document.getElementById('socials');
-        if (socialsSection) {
-          socialsSection.scrollIntoView({ behavior: 'smooth' });
+    
+    const scrollToBottom = () => {
+        if (parallaxRef.current) {
+          
+          parallaxRef.current.scrollTo(2);
         }
       };
+ 
 
     return (
         <header className="header">
             <div className="header-name">A | E</div>
             <nav>
                 <button className="header-link">About</button>
-                <button className="header-link" onClick={scrollToSocials}>Contact</button>
+                <button className="header-link" onClick={scrollToBottom}>Contact</button>
 
 
             </nav>
