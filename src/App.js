@@ -13,6 +13,7 @@ import { PopupWidget } from "react-calendly";
 import { PopupButton } from "react-calendly";
 import Footer from './components/Footer.js'
 import ScrollArrow from './components/ScrollArrow.js';
+import TextBox from './components/TextBox.js';
 
 
 
@@ -87,11 +88,19 @@ function App() {
           <ParallaxLayer offset={0.4} speed={0.8}>
           <ChatBox onSendMessage={handleSendMessage} conversation={conversation} />
           
-          <div className="arrow-container">
+          {/* <div className="arrow-container">
             <ScrollArrow parallaxRef={ref} />
-          </div>
+          </div> */}
 
-          
+          <ParallaxLayer offset={0.3} speed={0.5}>
+            <div className='text-container'>
+            <div className='textbox1'></div>
+            {/* <div className='textbox1'>and</div>
+            <div className='textbox1'>Only</div> */}
+
+            </div>
+            
+          </ParallaxLayer>
           
           </ParallaxLayer>
 

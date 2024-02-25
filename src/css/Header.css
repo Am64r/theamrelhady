@@ -19,6 +19,8 @@
     font-style: normal;
     color: black;
     padding-left: 10px;
+    background-color: transparent;
+    border: transparent;
   }
 
   .header-link {

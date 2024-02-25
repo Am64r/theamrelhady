@@ -130,9 +130,25 @@ h2 {
 .arrow-container {
   position: absolute;
   left: 50%;
-  bottom: 750px; /* Adjust this value to position the button from the bottom */
+  bottom: 750px; 
   transform: translateX(-50%);
 
+}
+
+.textbox1 {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 30px;
+  color: black;
+  font-weight: bold;
+}
+
+.text-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  padding-bottom: 20px;
+  
 }
 
 
