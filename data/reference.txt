@@ -1,5 +1,4 @@
 full name: Amr Elhady
-phone number: +1 609 495 7716 
 email: ae429@cornell.edu 
 College: Cornell University, graduating in 2026
 Major: Bachelor of Engineering in Computer Science
