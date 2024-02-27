@@ -36,19 +36,17 @@ def add_cors_headers(response):
 @app.route('/generate-text', methods=['POST'])
 
 def generate_text():
-    if (i <= 3):
-        data = request.json
-        query = data['text']
+    data = request.json
+    query = data['text']
 
-        loader = TextLoader("data/reference.txt")
-        loader2 = DirectoryLoader('data/')
+    loader = TextLoader("data/reference.txt")
+    loader2 = DirectoryLoader('data/')
 
-        index = VectorstoreIndexCreator().from_loaders([loader2])
+    index = VectorstoreIndexCreator().from_loaders([loader2])
 
-        result = index.query(query, llm=ChatOpenAI(temperature=0, model="gpt-3.5-turbo",))
-        i+=1
+    result = index.query(query, llm=ChatOpenAI(temperature=0, model="gpt-3.5-turbo",))
 
-        return jsonify({'generatedText': result})
+    return jsonify({'generatedText': result})
 
 
 @app.route('/')
