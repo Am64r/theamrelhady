@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "paths": {
+    "/gen": {
+      "name": "/gen",
+      "lambdaFunction": "theamrelhadyee428b2a",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}
