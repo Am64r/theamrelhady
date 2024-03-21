@@ -1,1 +1,0 @@
-APIKEY = "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"
